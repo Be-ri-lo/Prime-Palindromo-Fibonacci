@@ -1,7 +1,12 @@
 package heritage;
 
 public class Prime extends Number {
-    public static Boolean esPrimo(int numero) {
+   public void primo(){
+       System.out.println("Probando heritage");
+   }
+
+    @Override
+    public  Boolean esPrimo(int numero) {
         if (numero == 0 || numero == 1 || numero == 4) {
             return false;
         }
@@ -12,5 +17,15 @@ public class Prime extends Number {
         }
         // Si no se pudo dividir por ninguno de los de arriba, sí es primo
         return true;
+    }
+
+    @Override
+    public Boolean esPalindromo(int numero) {
+        return false;
+    }
+
+    @Override
+    public Boolean esFibonacci(int numero) {
+        return false;
     }
 }

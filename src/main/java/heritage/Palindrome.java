@@ -9,16 +9,33 @@ public class Palindrome extends Number {
     // Para compararlas debo recorrerlas y luego comparar ambas variables. Variable resto se agrega segun explicacion
     // de ejemplo.
 
-    public static Boolean  esPalindromo(int numero){
-        int resto, invertido = 0;
-        int num = numero;
+    @Override
+    public Boolean esPrimo(int numero) {
+        return false;
+    }
 
-        while(numero > 0) {
-            resto = numero % 10;
-            invertido = (invertido * 10) + resto;
-            numero /= 10;
+    @Override
+    public Boolean esPalindromo(int numero){
+       /* int resto, invertido = 0;
+        int num = numero;*/
+
+        if (numero / 10 >= 1) {
+            int invertido = 0, resto;
+            int num = numero;
+
+            while (numero != 0) {
+                resto = numero % 10;
+                invertido = (invertido * 10) + resto;
+                numero /= 10;
+            }
+            boolean palindromo = num == invertido;
+            return palindromo;
         }
-        boolean palindromo = num == invertido;
-        return palindromo;
+        return false;
+    }
+
+    @Override
+    public Boolean esFibonacci(int numero) {
+        return false;
     }
 }
