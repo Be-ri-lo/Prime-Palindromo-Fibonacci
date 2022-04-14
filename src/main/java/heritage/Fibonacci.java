@@ -26,18 +26,19 @@ package heritage;
             num2 =  temp + num1;
 
             if (numero == num2) {
-                contador = contador + 1;
+                return true;
             }
 
         }
+        return false;
+    }
 
-        if(contador != 0){
-          //  System.out.println("Pertenece a serie fibonacci");
-            return true;
-        } else{
-           // System.out.println("No pertenece");
-            return false;
-        }
+    @Override
+    public void messageResult(int numero) {
+        boolean b = esFibonacci(numero);
+        String message = b ? " Pertenece a serie Fibonacci" : " No pertenece a serie Fibonacci";
+
+        System.out.println("El numero " + numero + message);
     }
 
 }
@@ -45,26 +46,3 @@ package heritage;
 
 
 
-  /*int n1 = 0, n2 = 1, suma = 0, contador = 0;
-
-        //entrada con cero
-        while ( suma <=  numero){
-            suma =  n1 + n2;
-            n1 = n2;
-            n2 = suma;
-
-            if (numero == n2) {
-                contador = contador + 1;
-            }
-
-            if (numero == contador - 1){
-                System.out.println("SOy");
-                return true;
-            } else {
-                System.out.println("No soy");
-                return false;
-            }
-
-        }
-        return true;
-    }*/

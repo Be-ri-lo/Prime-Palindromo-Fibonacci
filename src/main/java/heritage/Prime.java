@@ -28,4 +28,12 @@ public class Prime extends Number {
     public Boolean esFibonacci(int numero) {
         return false;
     }
+
+    @Override
+    public void messageResult(int numero) {
+        boolean b = esPrimo(numero);
+        String message = b ? " Es un numero Primo" : " No es un numero Primo";
+
+        System.out.println("El numero " + numero + message);
+    }
 }

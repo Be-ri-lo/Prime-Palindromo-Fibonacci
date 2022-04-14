@@ -14,25 +14,9 @@ public class main {
         System.out.println("Escribe un numero");
         int numero = escaner.nextInt();
 
-        //debo agregar 4 supuesto, es primo y poli, es primo no poli, no es primo y poli, no es primo y no es poli.
-        //debo agregar con fibonacci
-        if (fibonacci.esFibonacci(numero) && prime.esPrimo(numero) && palindrome.esPalindromo(numero)) {
-            System.out.println(numero + " Es Fibonacci, Primo y Palindrome");
-        } else if (prime.esPrimo(numero) && fibonacci.esFibonacci(numero) ) {
-            System.out.println(numero + " Es Primo y Fibonacci");
-        } else if (prime.esPrimo(numero) && palindrome.esPalindromo(numero) ) {
-            System.out.println(numero + " Es Primo y Palindrome");
-        } else if (palindrome.esPalindromo(numero) && fibonacci.esFibonacci(numero)) {
-            System.out.println(numero + " Es Palindromo y Fibonacci");
-        } else if (prime.esPrimo(numero)){
-            System.out.println(numero + " Es Primo");
-        } else if (fibonacci.esFibonacci(numero)){
-            System.out.println(numero + " Es Fibonacci");
-        } else if (palindrome.esPalindromo(numero)){
-            System.out.println(numero + " Es Palindromo");
-        } else {
-            System.out.println(numero + " No es ninguna de las anteriores");
-        }
+        prime.messageResult(numero);
+        palindrome.messageResult(numero);
+        fibonacci.messageResult(numero);
 
         Number n = new Prime();
         test(n, numero);
