@@ -1,13 +1,7 @@
 package heritage;
 
-public class Palindrome extends Number {
+public class Palindrome implements Message {
 
-    @Override
-    public Boolean esPrimo(int numero) {
-        return false;
-    }
-
-    @Override
     public Boolean esPalindromo(int numero){
        /* int resto, invertido = 0;
         int num = numero;*/
@@ -28,15 +22,11 @@ public class Palindrome extends Number {
     }
 
     @Override
-    public Boolean esFibonacci(int numero) {
-        return false;
-    }
-
-    @Override
     public void messageResult(int numero) {
         boolean b = esPalindromo(numero);
-        String message = b ? " Es un numero Palindromo" : " No es un numero Palindromo";
+        String message = b ? " Pertenece a numero Palindromo" : " No pertenece a numero Palindromo";
 
         System.out.println("El numero " + numero + message);
+
     }
 }

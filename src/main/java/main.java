@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner escaner = new Scanner(System.in);
-        Number prime = new Prime();
-        Number palindrome = new Palindrome();
-        Number fibonacci = new Fibonacci();
+        Prime prime = new Prime();
+        Palindrome palindrome = new Palindrome();
+        Fibonacci fibonacci = new Fibonacci();
         System.out.println("Escribe un numero");
         int numero = escaner.nextInt();
 
@@ -18,18 +18,18 @@ public class main {
         palindrome.messageResult(numero);
         fibonacci.messageResult(numero);
 
-        Number n = new Prime();
+       /* Number n = new Prime();
         test(n, numero);
         n = new Palindrome();
         test(n, numero);
         n = new Fibonacci();
         test(n, numero);
-        escaner.close();
+        escaner.close();*/
     }
 
-    private static void test(Number number, int num){
+    /*private static void test(Number number, int num){
         number.esPrimo(num);
         number.esPalindromo(num);
         number.esFibonacci(num);
-    }
+    }*/
 }

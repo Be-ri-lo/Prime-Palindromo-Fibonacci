@@ -1,11 +1,10 @@
 package heritage;
 
-public class Prime extends Number {
+public class Prime implements Message {
    public void primo(){
        System.out.println("Probando heritage");
    }
 
-    @Override
     public  Boolean esPrimo(int numero) {
         if (numero == 0 || numero == 1 || numero == 4) {
             return false;
@@ -19,7 +18,7 @@ public class Prime extends Number {
         return true;
     }
 
-    @Override
+   /* @Override
     public Boolean esPalindromo(int numero) {
         return false;
     }
@@ -27,13 +26,14 @@ public class Prime extends Number {
     @Override
     public Boolean esFibonacci(int numero) {
         return false;
-    }
+    }*/
 
     @Override
     public void messageResult(int numero) {
         boolean b = esPrimo(numero);
-        String message = b ? " Es un numero Primo" : " No es un numero Primo";
+        String message = b ? " Pertenece a un numero Primo" : " No pertenece a numero Primo";
 
         System.out.println("El numero " + numero + message);
+
     }
 }
